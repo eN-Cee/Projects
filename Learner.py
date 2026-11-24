@@ -1,7 +1,16 @@
-class Item():
-    def __init__(self):
-        print("I am a student of UNN, and I thank God for that")
-        print("Thank God for my admission and scholarship")
+def fizz_buzz(n):
+    result = []
 
-item1 = Item()
+    for n in range(1, n +1):
+        if n%5 ==0 and n%3 ==0:
+            result.append("FizzBuzz")
+        elif n%5 == 0:
+            result.append("Buzz")
+        elif n%3 ==0:
+            result.append("Fizz")
+        else:
+            result.append(n)
+            print(result)
+    return result
 
+fizz_buzz(4)
