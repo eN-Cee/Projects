@@ -1,8 +1,29 @@
-from datetime import date
-def calculate_age(birthday_str: str) -> int:
-    birthday = date.fromisoformat(birthday_str)
-    today = date.today()
-    age = today.year - birthday.year - ((today.month, today.day) < (birthday.month, birthday.day))
-    return age
-user_bday = input("enter birthday in format yyyy-mm-dd: ")
-calculate_age(user_bday)
+import customtkinter as ctk
+
+# Configure the appearance
+ctk.set_appearance_mode("dark")
+ctk.set_default_color_theme("blue")
+
+# 1. Create the window
+app = ctk.CTk()
+app.title("My First Modern App")
+app.geometry("4000x3000")
+
+# 2. Create widgets
+title = ctk.CTkLabel(
+    app,
+    text="Hello!",
+    font=("ALGERIAN", 28, "bold")
+)
+
+button = ctk.CTkButton(
+    app,
+    text="Konnichiwa"
+)
+
+# 3. Place widgets inside the window
+title.pack(pady=70)
+button.pack(pady=60)
+
+# 4. Run the application
+app.mainloop()
